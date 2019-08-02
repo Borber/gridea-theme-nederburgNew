@@ -1,9 +1,14 @@
 <html>
   <head>
+
     <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
   </head>
   <body class="home blog ct-body standard">
-    <div id="overflow-container" class="overflow-container">
+  <!--  音乐播放器 start-->
+  <div id="aplayer9" class="aplayer aplayer-fixed aplayer-narrow" data-id="864701453" data-server=”netease" data-type="playlist" data-autoplay=”true” data-mode=”circulation”></div>
+  <!--  音乐播放器 end-->
+
+  <div id="overflow-container" class="overflow-container">
 
         <%- include('./includes/header') %>
 
@@ -14,9 +19,13 @@
         <%- include('./includes/footer') %>
 
       </div>
+    <!--    点击爆炸特效 start-->
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
-    <script type =“text/javascript" src ="../assets/media/scripts/lib/fireworks.js"> </script>
+    <script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script src ="https://borber.cn/media/scripts/lib/fireworks.js"> </script>
+    <!--    点击爆炸特效 ends-->
 
+    <!--返回顶部 start-->
     <script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
     <script src="https://tokinx.github.io/lately/lately.min.js"></script>
     <script>jQuery(document).ready(function(){$.lately({'target':'.lately-a,.lately-b,.lately-c'})});</script>
@@ -52,6 +61,8 @@
         };
       })(this));
     </script>
+
+    <!--返回顶部 ends-->
 
   </body>
 </html>
