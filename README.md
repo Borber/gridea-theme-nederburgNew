@@ -1,4 +1,4 @@
-#  Gridea Theme 「 NederburgNew 」
+#  Gridea Theme 「 NederburgNewer 」
 
 套用[Nederburg](https://github.com/Suremotoo/gridea-theme-nederburg)以及 [NederburgNew](https://github.com/sadjjk/gridea-theme-nederburgNew) 主题，在此基础上，进行个人喜好的微调
 
@@ -12,6 +12,7 @@
 - 增加代码块css样式
 - 归档风格修改
 - 首页文章表列增加圆角
+- 添加 回到顶部功能
 
 ## 安装
 1. 如果Gridea正在运行，请先关闭.
