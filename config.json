@@ -27,6 +27,14 @@
       "note": "链接地址"
     },
     {
+      "name": "telegram",
+      "label": "telegram",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
       "name": "envelope",
       "label": "envelope",
       "group": "社交",
