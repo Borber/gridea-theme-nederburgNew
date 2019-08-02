@@ -1,0 +1,101 @@
+<html>
+<head>
+  <%- include('./includes/head',  { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+</head>
+<body class="home blog ct-body standard">
+<div id="overflow-container" class="overflow-container">
+  <%- include('./includes/header') %>
+
+  <div id="main" class="main" role="main">
+    <div id="loop-container" class="loop-container">
+      <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+        <% if (themeConfig.showFeatureImage && post.feature) { %>
+          <div class='featured-image lazy lazy-bg-image' data-background="<%= post.feature %>">
+          </div>
+        <% } %>
+
+        <div class="entry-meta">
+          <span class="date">· <%= post.dateFormat %> ·</span>
+
+          <% post.tags.forEach(function(tag) { %>
+            <span class="category">
+                    <span> / </span>
+                    <a href="<%= tag.link %>"><%= tag.name %></a>
+                </span>
+          <% }); %>
+        </div>
+        <div class='entry-header'>
+          <h1 class='entry-title'><%= post.title %></h1>
+        </div>
+        <div class="entry-container">
+          <div class="entry-content">
+            <article>
+              <%- post.content %>
+            </article>
+          </div>
+        </div>
+          <% if (post.nextPost && !post.hideInList) { %>
+            <nav class="navigation pagination" role="navigation">
+              <h2 class="screen-reader-text">Posts navigation</h2>
+              <div class="nav-links">
+                <a class="next page-numbers" style="font-size:20px" href="<%= post.nextPost.link %>">下一篇-><%= post.nextPost.title %></a>
+              </div>
+            </nav>
+          <% } %>
+      </div>
+      <section id="comments" class="comments">
+        <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+          <% if (commentSetting.commentPlatform === 'gitalk') { %>
+            <%- include('./includes/gitalk') %>
+          <% } %>
+
+          <% if (commentSetting.commentPlatform === 'disqus') { %>
+            <%- include('./includes/disqus') %>
+          <% } %>
+        <% } %>
+      </section>
+    </div>
+  </div>
+  <%- include('./includes/footer') %>
+</div>
+
+<script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+<script type='text/javascript' src='https://miracol.cn/media/scripts/marlin-scripts.js'></script>
+<script src="https://tokinx.github.io/lately/lately.min.js"></script>
+<script>jQuery(document).ready(function(){$.lately({'target':'.lately-a,.lately-b,.lately-c'})});</script>
+
+<a id="back_to_top" href="#" class="back_to_top">
+      <span>
+        <i class="iconfont icon-xiangshang"></i>
+      </span>
+</a>
+
+
+<script>$(document).ready((function(_this) {
+        return function() {
+            var bt;
+            bt = $('#back_to_top');
+            if ($(document).width() > 480) {
+                $(window).scroll(function() {
+                    var st;
+                    st = $(window).scrollTop();
+                    if (st > 30) {
+                        return bt.css('display', 'block');
+                    } else {
+                        return bt.css('display', 'none');
+                    }
+                });
+                return bt.click(function() {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
+                    return false;
+                });
+            }
+        };
+    })(this));
+</script>
+
+</body>
+</html>
+
