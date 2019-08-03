@@ -6,6 +6,7 @@
 
 ## 修改
 
+- 增加 loading  加载特效
 - 增加个性化设置 可以自定义首页播放器歌单
 - 添加音乐播放器 [Aplayer](https://aplayer.js.org/#/zh-Hans/)
 - 删除顶部菜单栏
