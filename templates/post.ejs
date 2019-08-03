@@ -3,6 +3,7 @@
   <%- include('./includes/head',  { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
 </head>
 <body class="home blog ct-body standard">
+<%- include('./includes/loadingstart') %>
 <div id="overflow-container" class="overflow-container">
   <%- include('./includes/header') %>
 
@@ -60,6 +61,8 @@
 </div>
 
         <%- include('./includes/top') %>
+
+<%- include('./includes/loadingend') %>
 
 </body>
 </html>

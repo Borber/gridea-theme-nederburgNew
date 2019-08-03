@@ -3058,3 +3058,76 @@ a.back_to_top:hover span {
   left: 0;
   top: 0;
 }
+
+/* changes BORBER  For loding*/
+
+.loader {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: #222222;
+  text-align: center;
+  -webkit-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.loader-content {
+  position: absolute;
+  text-align: center;
+  width: 110px;
+  height: 95px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+.loading{
+  width: 80px;
+  height: 40px;
+  margin: 0 auto;
+  margin-top:100px;
+}
+.loading span{
+  display: inline-block;
+  width: 8px;
+  height: 100%;
+  border-radius: 4px;
+  background: #4691ee;
+  -webkit-animation: load 1s ease infinite;
+}
+@-webkit-keyframes load{
+  0%,100%{
+    height: 40px;
+    background: #38acee;
+  }
+  50%{
+    height: 70px;
+    margin: -15px 0;
+    background: #87d5e6;
+  }
+}
+.loading span:nth-child(2){
+  -webkit-animation-delay:0.2s;
+}
+.loading span:nth-child(3){
+  -webkit-animation-delay:0.4s;
+}
+.loading span:nth-child(4){
+  -webkit-animation-delay:0.6s;
+}
+.loading span:nth-child(5){
+  -webkit-animation-delay:0.8s;
+}
