@@ -1,0 +1,38 @@
+<!--返回顶部 start-->
+<script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+<script src="https://tokinx.github.io/lately/lately.min.js"></script>
+<script>jQuery(document).ready(function(){$.lately({'target':'.lately-a,.lately-b,.lately-c'})});</script>
+
+<a id="back_to_top" href="#" class="back_to_top">
+      <span>
+        <i class="iconfont icon-xiangshang"></i>
+      </span>
+</a>
+
+
+<script>$(document).ready((function(_this) {
+        return function() {
+            var bt;
+            bt = $('#back_to_top');
+            if ($(document).width() > 480) {
+                $(window).scroll(function() {
+                    var st;
+                    st = $(window).scrollTop();
+                    if (st > 30) {
+                        return bt.css('display', 'block');
+                    } else {
+                        return bt.css('display', 'none');
+                    }
+                });
+                return bt.click(function() {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
+                    return false;
+                });
+            }
+        };
+    })(this));
+</script>
+
+<!--返回顶部 ends-->
