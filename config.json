@@ -2,7 +2,32 @@
   "name": "NederburgNewer",
   "version": "1.0.0",
   "author": "BORBER",
-  "customConfig": [{
+  "customConfig": [
+    {
+      "name": "username",
+      "label": "昵称",
+      "group": "用户信息",
+      "value": "",
+      "type": "input",
+      "note": "昵称"
+    },
+    {
+      "name": "userdesc",
+      "label": "简单描述",
+      "group": "用户信息",
+      "value": "",
+      "type": "input",
+      "note": "简单描述"
+    },
+    {
+      "name": "netease",
+      "label": "首页歌单(netease)",
+      "group": "个性化",
+      "value": "",
+      "type": "input",
+      "note": "ID"
+    },
+    {
       "name": "github",
       "label": "Github",
       "group": "社交",
@@ -74,6 +99,7 @@
       "type": "input",
       "note": "链接地址"
     },
+
     {
       "name": "ga",
       "label": "跟踪 ID",
@@ -81,22 +107,6 @@
       "value": "",
       "type": "input",
       "note": "UA-xxxxxxxxx-x"
-    },
-    {
-      "name": "username",
-      "label": "昵称",
-      "group": "用户信息",
-      "value": "",
-      "type": "input",
-      "note": "昵称"
-    },
-    {
-      "name": "userdesc",
-      "label": "简单描述",
-      "group": "用户信息",
-      "value": "",
-      "type": "input",
-      "note": "简单描述"
     }
   ]
 }

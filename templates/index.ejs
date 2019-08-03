@@ -4,17 +4,15 @@
     <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
   </head>
   <body class="home blog ct-body standard">
-  <!--  音乐播放器 start-->
-  <div id="aplayer9" class="aplayer aplayer-fixed aplayer-narrow" data-id="864701453" data-server=”netease" data-type="playlist" data-autoplay=”true” data-mode=”circulation”></div>
-  <!--  音乐播放器 end-->
 
   <div id="overflow-container" class="overflow-container">
-
         <%- include('./includes/header') %>
 
         <%- include('./includes/post-list') %>
 
         <%- include('./includes/pagination') %>
+
+        <%- include('./includes/aplayer') %>
 
         <%- include('./includes/footer') %>
 
