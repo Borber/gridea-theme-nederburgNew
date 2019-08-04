@@ -16,7 +16,7 @@
       "label": "简单描述",
       "group": "用户信息",
       "value": "",
-      "type": "input",
+      "type": "textarea",
       "note": "简单描述"
     },
     {
