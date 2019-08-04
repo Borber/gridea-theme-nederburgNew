@@ -20,8 +20,33 @@
       "note": "简单描述"
     },
     {
-      "name": "netease",
-      "label": "首页歌单(netease)",
+      "name": "listype",
+      "label": "首页歌单",
+      "group": "个性化",
+      "value": "netease",
+      "type": "select",
+      "options": [
+        {
+          "label": "网易云音乐",
+          "value": "netease"
+        },
+        {
+          "label": "QQ音乐",
+          "value": "tecent"
+        },
+        {
+          "label": "虾米音乐",
+          "value": "xiami"
+        },
+        {
+          "label": "酷狗音乐",
+          "value": "kugou"
+        }
+      ]
+    },
+    {
+      "name": "listid",
+      "label": "歌单ID",
       "group": "个性化",
       "value": "",
       "type": "input",
