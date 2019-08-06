@@ -1,6 +1,7 @@
 <html>
 <head>
   <%- include('./includes/head',  { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+    <%- include('./includes/highlight')%>
 </head>
 <body class="home blog ct-body standard">
 <%- include('./includes/loadingstart') %>
@@ -45,6 +46,8 @@
             <% } %>
 
             <%- include('./includes/authorbox') %>
+
+            <%- include('./includes/tocbot') %>
 
         </div>
 
