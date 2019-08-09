@@ -1,33 +1,23 @@
 <html>
   <head>
-
     <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
   </head>
   <body class="home blog ct-body standard">
-
   <%- include('./includes/loadingstart') %>
+    <div id="overflow-container" class="overflow-container">
 
+      <%- include('./includes/header') %>
 
-  <div id="overflow-container" class="overflow-container">
-        <%- include('./includes/header') %>
+      <%- include('./includes/post-list') %>
 
-        <%- include('./includes/post-list') %>
+      <%- include('./includes/pagination') %>
 
-        <%- include('./includes/pagination') %>
+      <%- include('./includes/aplayer') %>
 
-        <%- include('./includes/aplayer') %>
-
-        <%- include('./includes/footer') %>
-
+      <%- include('./includes/footer') %>
       </div>
-    <%- include('./includes/fireworks') %>
-
-    <%- include('./includes/top') %>
-
-    <%- include('./includes/loadingend') %>
-
-
-
+  <%- include('./includes/fireworks') %>
+  <%- include('./includes/loadingend') %>
   </body>
 </html>
 

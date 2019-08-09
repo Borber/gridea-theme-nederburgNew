@@ -10,7 +10,7 @@
         </div>
     </div>
     <ul class="social-media-icons">
-        <% ['github', 'twitter', 'weibo', 'zhihu', 'facebook', 'envelope', 'qq', 'telegram', 'rss'].forEach((item) => { %>
+        <% ['github', 'twitter','telegram', 'weibo', 'zhihu', 'facebook', 'envelope', 'qq', 'rss'].forEach((item) => { %>
             <% if (site.customConfig[item]) { %>
                 <li>
                     <a href="<%= site.customConfig[item] %>" data-animate-hover="pulse" class="<%= item %>" target="_blank">
@@ -25,11 +25,12 @@
         <p><%-themeConfig.footerInfo%></p>
     </div>
 </footer>
+
 <script>
-    hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 </script>
+<script src="<%= themeConfig.domain %>/media/scripts/lib/autoc.min.js"></script>
 <script src="<%= themeConfig.domain %>/media/scripts/lib/jquery.min.js"></script>
-<script src="<%= themeConfig.domain %>/media/scripts/lib/jquerymigrate.js"></script>
 <script src="<%= themeConfig.domain %>/media/scripts/lib/production.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
