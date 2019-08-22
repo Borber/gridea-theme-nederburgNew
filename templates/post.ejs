@@ -1,8 +1,9 @@
-<html>
+<html lang="zh">
 <head>
   <%- include('./includes/head',  { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
 </head>
 <body class="home blog ct-body standard">
+<%- include('./includes/loadingstart') %>
 <div id="overflow-container" class="overflow-container">
   <%- include('./includes/header') %>
 
@@ -34,14 +35,27 @@
             </article>
           </div>
         </div>
-          <% if (post.nextPost && !post.hideInList) { %>
-            <nav class="navigation pagination" role="navigation">
-              <h2 class="screen-reader-text">Posts navigation</h2>
-              <div class="nav-links">
-                <a class="next page-numbers" style="font-size:20px" href="<%= post.nextPost.link %>">下一篇-><%= post.nextPost.title %></a>
-              </div>
+
+            <nav class="pager">
+
+                <li class="previous"><a class="prev">上一篇</a>
+                    <% if (post.prevPost && !post.hideInList) { %>
+                        <a style="display:none" class="prevspan" title="<%= post.prevPost.title %>" href="<%= post.prevPost.link %>"><%= post.prevPost.title %></a>
+                    <% } %>
+                </li>
+
+
+                <li class="nextpost"><a class="next">下一篇</a>
+                    <% if (post.nextPost && !post.hideInList) { %>
+                        <a style="display:none" class="nextspan" title="<%= post.nextPost.title %>" href="<%= post.nextPost.link %>"> <%= post.nextPost.title %></a>
+                    <% } %>
+                </li>
+
             </nav>
-          <% } %>
+
+
+
+
             <%- include('./includes/authorbox') %>
       </div>
       <section id="comments" class="comments">
@@ -72,6 +86,7 @@
     })
     </script>
 </div>
+<%- include('./includes/loadingend') %>
 </body>
 </html>
 

@@ -20,6 +20,14 @@
       "note": "简单描述"
     },
     {
+      "name": "headimg",
+      "label": "首页封面",
+      "group": "个性化",
+      "value": "",
+      "type": "input",
+      "note": "url"
+    },
+    {
       "name": "listype",
       "label": "首页歌单",
       "group": "个性化",
