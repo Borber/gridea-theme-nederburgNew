@@ -61,6 +61,14 @@
       "note": "ID"
     },
     {
+      "name": "BirthDay",
+      "label": "建站日期 | 用于显示 网站已经稳定运行 XX 天 XX 时 XX 分",
+      "group": "个性化",
+      "value": "",
+      "type": "input",
+      "note": "6/17/2019 00:23:23"
+    },
+    {
       "name": "github",
       "label": "Github",
       "group": "社交",
